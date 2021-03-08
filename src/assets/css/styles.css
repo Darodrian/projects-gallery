@@ -1,0 +1,266 @@
+@font-face{
+	font-family: "yanone";
+	src: url("fonts/yanone.ttf");
+}
+
+@font-face{
+	font-family: "finger";
+	src: url("fonts/finger.ttf");
+}
+
+/*General*/
+
+*{
+	margin: 0px;
+	padding: 0px;
+}
+
+body{
+	font-family: "yanone", Arial, Helvetica;
+	font-size: 20px;
+	background: url("../img/pattern.png");
+	background-attachment: fixed;
+}
+
+#flex-container{
+	display: flex;
+	flex-direction: column;
+}
+
+.clearfix{
+	float: none;
+	clear: both;
+}
+
+/*Header/Navbar*/
+
+header{
+	display: block;
+	width: 100%;
+	height: 90px;
+	background: rgba(75, 75, 75, 0.8);
+	position: fixed;
+	text-transform: uppercase;
+}
+
+header ul{
+	display: block;
+	width: 40%;
+	height: inherit;
+	margin: 0px auto;
+	margin-top: -3px
+}
+
+header ul li{
+	display: inline-block;
+	margin: 0px auto;
+	text-align: center;
+	line-height: 88px;
+}
+
+header a{
+	display: block;
+	padding-right: 20px;
+	padding-left: 20px;
+	height: inherit;
+	text-decoration: none;
+	color: white;
+	transition: all 300ms;
+}
+
+header a:hover,
+.active{
+	background: rgba(0,0,0,0.8);
+}
+
+header #logo a:hover{
+	background: transparent;
+}
+
+/*Logo*/
+
+#logo {
+	font-family: "finger";
+	font-size: 30px;
+}
+
+#logo a{
+	transition: color 500ms, transform 500ms;
+}
+
+#logo a:hover{
+	background: transparent;
+	color: black;
+	transform:scale(1.50, 1.50);
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+/*Main container*/
+
+#content{
+	flex: 1;
+	min-height: 750px;
+	height: auto;
+	width: 75%;
+	margin: 0px auto;
+	box-shadow: 0px 0px 40px black;
+	border-left: 1px solid #b7b7b7;
+	border-right: 1px solid #b7b7b7;
+	background: rgba(255, 255, 255, 0.7);
+	padding-top: 120px;
+}
+
+/*Footer*/
+
+#footer{
+	width: 75%;
+	margin: 0px auto;
+	padding-top: 15px;
+	color: rgba(0, 0, 0, 0.5);
+}
+
+/*About Me*/
+
+#title{
+	width: 70%;
+	margin: 0px auto;
+	text-align: center;
+	margin-top: 20px;
+	margin-bottom: 70px;
+}
+
+#title h1{
+	font-family: "finger";
+	font-size: 60px;
+	border-bottom: 1px solid #ccc;
+	padding-bottom: 5px;
+}
+
+#title h2{
+	font-size: 25px;
+	color: gray;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+article.about{
+	width: 70%;
+	margin: 0px auto;
+	margin-bottom: 20px;
+	font-size: 23px;
+}
+
+.about h2{
+	border-bottom: 1px solid #ccc;
+	padding-bottom: 5px;
+}
+
+.about p{
+	padding-top: 20px;
+	padding-bottom: 30px;
+	text-align: justify;
+}
+
+/*Create project section*/
+
+.container{
+	padding: 50px;
+	padding-top: 10px;
+}
+
+.container h2{
+	display: block;
+	border-bottom: 1px solid #ccc;
+	padding-bottom: 10px;
+	margin-bottom: 15px;
+}
+
+form{
+	width: 80%;
+}
+
+form label{
+	display: block;
+	width: 100%;
+	margin-top: 10px;
+	margin-bottom: 5px;
+}
+
+form input[type="text"],
+form input[type="number"],
+form textarea{
+	width: 40%;
+	padding: 5px;
+}
+
+form button,
+form input[type="submit"]{
+	display: block;
+	font-size: 17px;
+	padding: 10px;
+	margin-top: 15px;
+	color: white;
+	background: rgba(100, 100, 100, 1);
+	border: 1px solid rgba(0, 0, 0, 1);
+	cursor: pointer;
+}
+
+form button,
+form input[type="submit"]:hover{
+	background: rgba(100, 100, 100, 0.8);
+	border: 1px solid rgba(0, 0, 0, 1);
+}
+
+form input[disabled]{
+	opacity: 0.4;
+	cursor: not-allowed;
+}
+
+.form_error{
+	font-size: 13px;
+	padding: 3px;
+	color: red;
+	margin-left: 5px;
+}
+
+.message{
+	width: 50%;
+	padding: 5px;
+	border: 1px solid #eee;
+}
+
+.success{
+	color: green;
+}
+
+.message a{
+	color: blue;
+}
+
+.failed{
+	color: red;
+}
+
+/*Gallery*/
+
+.project{
+	list-style: none;
+	display: block;
+	float: left;
+	width: 28%;
+	text-align: center;
+	margin-left: 20px;
+	margin-right: 20px;
+	margin-bottom: 30px;
+}
+
+.project .image{
+	width: 100%;
+	height: 250px;
+	overflow: hidden;
+}
+
+.project img{
+	width: 100%;
+}

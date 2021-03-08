@@ -1,0 +1,18 @@
+<div id="flex-container">
+	<header>
+		<ul>
+		  <li><a [routerLink]="['/sobre-mi']" [routerLinkActive]="['active']">About Me</a></li>
+		  <li><a [routerLink]="['/galeria']" [routerLinkActive]="['active']">Gallery</a></li>
+		  <li id="logo"><a href="#">Logo</a></li>
+		  <li><a [routerLink]="['/crear-proyecto']" [routerLinkActive]="['active']">Create Project</a></li>
+		  <li><a [routerLink]="['/contacto']" [routerLinkActive]="['active']">Contact</a></li>
+		</ul>
+	</header>
+
+	<section id="content">
+		<router-outlet></router-outlet>
+	</section>
+
+	<footer id="footer">©Copyrights</footer>	
+</div>
+
